@@ -5,6 +5,7 @@ import respond from 'src/middlewares/respond';
 import mountTESTING from './testing';
 import mountTREST from './trest';
 import mountSADSAD from './sadsad';
+import mountQWEWQ from './qwewq';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -32,4 +33,8 @@ export default function addRoutes(router: Router) {
     const sadsad = Router();
     mountSADSAD(sadsad);
     router.use('/sadsad', sadsad);
+
+    const qwewq = Router();
+    mountQWEWQ(qwewq);
+    router.use('/qwewq', qwewq);
 }
