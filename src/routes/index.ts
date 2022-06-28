@@ -8,6 +8,7 @@ import mountSADSAD from './sadsad';
 import mountQWEWQ from './qwewq';
 import mountTESTINF from './testinf';
 import mountASDAWSD from './asdawsd';
+import mountASDASD from './asdasd';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -47,4 +48,8 @@ export default function addRoutes(router: Router) {
     const asdawsd = Router();
     mountASDAWSD(asdawsd);
     router.use('/asdawsd', asdawsd);
+
+    const asdasd = Router();
+    mountASDASD(asdasd);
+    router.use('/asdasd', asdasd);
 }
