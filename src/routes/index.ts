@@ -10,6 +10,7 @@ import mountTESTINF from './testinf';
 import mountASDAWSD from './asdawsd';
 import mountASDASD from './asdasd';
 import mountASDW from './asdw';
+import mountASDWW from './asdww';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -57,4 +58,8 @@ export default function addRoutes(router: Router) {
     const asdw = Router();
     mountASDW(asdw);
     router.use('/asdw', asdw);
+
+    const asdww = Router();
+    mountASDWW(asdww);
+    router.use('/asdww', asdww);
 }
