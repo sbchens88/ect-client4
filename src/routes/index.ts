@@ -12,8 +12,8 @@ import mountASDASD from './asdasd';
 import mountASDW from './asdw';
 import mountASDWW from './asdww';
 import mountASDF from './asdf';
+import mountADS from './ads';
 
-2;
 export default function addRoutes(router: Router) {
     const api = express.Router();
     const auth = express.Router();
@@ -68,4 +68,8 @@ export default function addRoutes(router: Router) {
     const asdf = Router();
     mountASDF(asdf);
     router.use('/asdf', asdf);
+
+    const ads = Router();
+    mountADS(ads);
+    router.use('/ads', ads);
 }
