@@ -11,6 +11,7 @@ import mountASDAWSD from './asdawsd';
 import mountASDASD from './asdasd';
 import mountASDW from './asdw';
 import mountASDWW from './asdww';
+import mountASDF from './asdf';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -62,4 +63,8 @@ export default function addRoutes(router: Router) {
     const asdww = Router();
     mountASDWW(asdww);
     router.use('/asdww', asdww);
+
+    const asdf = Router();
+    mountASDF(asdf);
+    router.use('/asdf', asdf);
 }
