@@ -15,6 +15,8 @@ import mountASDF from './asdf';
 import mountADS from './ads';
 import mountASD from './asd';
 
+console.log(' in index ');
+
 export default function addRoutes(router: Router) {
     const api = express.Router();
     const auth = express.Router();
