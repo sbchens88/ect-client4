@@ -13,8 +13,7 @@ import mountASDW from './asdw';
 import mountASDWW from './asdww';
 import mountASDF from './asdf';
 
-112312;
-
+2;
 export default function addRoutes(router: Router) {
     const api = express.Router();
     const auth = express.Router();
