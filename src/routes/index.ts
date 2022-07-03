@@ -14,6 +14,7 @@ import mountASDWW from './asdww';
 import mountASDF from './asdf';
 import mountADS from './ads';
 import mountASD from './asd';
+import mountASDSA from './asdsa';
 
 console.log(' Testing in index ');
 
@@ -79,4 +80,8 @@ export default function addRoutes(router: Router) {
     const asd = Router();
     mountASD(asd);
     router.use('/asd', asd);
+
+    const asdsa = Router();
+    mountASDSA(asdsa);
+    router.use('/asdsa', asdsa);
 }
