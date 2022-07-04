@@ -17,10 +17,16 @@ import mountASD from './asd';
 import mountASDSA from './asdsa';
 import mountEWF from './ewf';
 import mountYUCL from './yucl';
+import mountYUCAL from './yucal';
 
 console.log(' Testing in index ');
 
 console.log('ENV: ', process.env);
+console.log('************************************************************************');
+console.log('************************************************************************');
+console.log('NODE_ENV: ', process.env.NODE_ENV);
+console.log('************************************************************************');
+console.log('************************************************************************');
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -96,4 +102,8 @@ export default function addRoutes(router: Router) {
     const yucl = Router();
     mountYUCL(yucl);
     router.use('/yucl', yucl);
+
+    const yucal = Router();
+    mountYUCAL(yucal);
+    router.use('/yucal', yucal);
 }
