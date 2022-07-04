@@ -20,6 +20,8 @@ import mountYUCL from './yucl';
 
 console.log(' Testing in index ');
 
+console.log('ENV: ', process.env);
+
 export default function addRoutes(router: Router) {
     const api = express.Router();
     const auth = express.Router();
