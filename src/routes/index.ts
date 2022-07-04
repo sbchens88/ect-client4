@@ -20,6 +20,7 @@ import mountYUCL from './yucl';
 import mountYUCAL from './yucal';
 import mountCHEN from './chen';
 import mountADASD from './adasd';
+import mountEFOIHDSLN from './efoihdsln';
 
 console.log(' Testing in index ');
 
@@ -111,4 +112,8 @@ export default function addRoutes(router: Router) {
     const adasd = Router();
     mountADASD(adasd);
     router.use('/adasd', adasd);
+
+    const efoihdsln = Router();
+    mountEFOIHDSLN(efoihdsln);
+    router.use('/efoihdsln', efoihdsln);
 }

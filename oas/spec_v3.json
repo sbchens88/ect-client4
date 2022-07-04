@@ -428,6 +428,13 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/efoihdsln/asdjokl/asdj": {
+      "get": {
+        "summary": "/efoihdsln/asdjokl/asdj",
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "tags": [],

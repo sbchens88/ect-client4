@@ -493,6 +493,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/efoihdsln/asdjokl/asdj": {
+      "get": {
+        "summary": "/efoihdsln/asdjokl/asdj",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
