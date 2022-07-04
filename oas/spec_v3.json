@@ -414,6 +414,13 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/chen/yuval/bell": {
+      "get": {
+        "summary": "/chen/yuval/bell",
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "tags": [],

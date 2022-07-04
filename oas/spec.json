@@ -471,6 +471,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/chen/yuval/bell": {
+      "get": {
+        "summary": "/chen/yuval/bell",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
