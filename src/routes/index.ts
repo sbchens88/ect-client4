@@ -16,6 +16,7 @@ import mountADS from './ads';
 import mountASD from './asd';
 import mountASDSA from './asdsa';
 import mountEWF from './ewf';
+import mountYUCL from './yucl';
 
 console.log(' Testing in index ');
 
@@ -89,4 +90,8 @@ export default function addRoutes(router: Router) {
     const ewf = Router();
     mountEWF(ewf);
     router.use('/ewf', ewf);
+
+    const yucl = Router();
+    mountYUCL(yucl);
+    router.use('/yucl', yucl);
 }
