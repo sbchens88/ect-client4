@@ -19,6 +19,7 @@ import mountEWF from './ewf';
 import mountYUCL from './yucl';
 import mountYUCAL from './yucal';
 import mountCHEN from './chen';
+import mountADASD from './adasd';
 
 console.log(' Testing in index ');
 
@@ -106,4 +107,8 @@ export default function addRoutes(router: Router) {
     const chen = Router();
     mountCHEN(chen);
     router.use('/chen', chen);
+
+    const adasd = Router();
+    mountADASD(adasd);
+    router.use('/adasd', adasd);
 }

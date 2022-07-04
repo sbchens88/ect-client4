@@ -421,6 +421,13 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/adasd/asdasdasd/asdwwwwwww": {
+      "get": {
+        "summary": "/adasd/asdasdasd/asdwwwwwww",
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "tags": [],

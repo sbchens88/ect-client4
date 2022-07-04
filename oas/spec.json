@@ -482,6 +482,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/adasd/asdasdasd/asdwwwwwww": {
+      "get": {
+        "summary": "/adasd/asdasdasd/asdwwwwwww",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
