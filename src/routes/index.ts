@@ -22,7 +22,7 @@ import mountCHEN from './chen';
 import mountADASD from './adasd';
 import mountEFOIHDSLN from './efoihdsln';
 
-console.log(' Testing in index ');
+console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
 
 export default function addRoutes(router: Router) {
