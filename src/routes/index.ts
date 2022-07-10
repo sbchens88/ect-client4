@@ -23,6 +23,7 @@ import mountADASD from './adasd';
 import mountEFOIHDSLN from './efoihdsln';
 import mountDSA from './dsa';
 import mountFGHJK from './fghjk';
+import mountASDFD from './asdfd';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -125,4 +126,8 @@ export default function addRoutes(router: Router) {
     const fghjk = Router();
     mountFGHJK(fghjk);
     router.use('/fghjk', fghjk);
+
+    const asdfd = Router();
+    mountASDFD(asdfd);
+    router.use('/asdfd', asdfd);
 }

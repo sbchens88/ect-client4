@@ -568,6 +568,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/asdfd/gdbvsdfg/bvdsfg": {
+      "get": {
+        "summary": "/asdfd/gdbvsdfg/bvdsfg",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
