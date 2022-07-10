@@ -1,605 +1,545 @@
 {
-  "components": {
-    "securitySchemes": {
-      "authorization": {
-        "name": "authorization",
-        "in": "header",
-        "type": "apiKey"
-      }
-    }
-  },
-  "definitions": {},
-  "host": "localhost:3030",
-  "info": {
-    "title": "eradani-connect-template",
-    "version": "2.5.2",
-    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
-  },
-  "openapi": "3.0.0",
-  "paths": {
-    "/": {
-      "get": {
-        "summary": "/",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "example": "Up and running!"
-                    }
-                  }
-                }
-              }
+    "components": {
+        "securitySchemes": {
+            "authorization": {
+                "name": "authorization",
+                "in": "header",
+                "type": "apiKey"
             }
-          },
-          "304": {
-            "description": ""
-          }
-        },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ]
-      }
-    },
-    "/api/rpg/simple-calc/{num}": {
-      "get": {
-        "summary": "/api/rpg/simple-calc/{num}",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "num",
-            "in": "path",
-            "required": true,
-            "example": 5,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "input": {
-                      "type": "number",
-                      "example": 5
-                    },
-                    "output": {
-                      "type": "number",
-                      "example": 500
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "304": {
-            "description": ""
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "example": "Bad Data Supplied to API"
-                    },
-                    "errors": {
-                      "type": "object",
-                      "properties": {
-                        "num": {
-                          "type": "object",
-                          "properties": {
-                            "value": {
-                              "type": "string",
-                              "example": "a"
-                            },
-                            "msg": {
-                              "type": "string",
-                              "example": "Invalid value"
-                            },
-                            "param": {
-                              "type": "string",
-                              "example": "num"
-                            },
-                            "location": {
-                              "type": "string",
-                              "example": "params"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "example": "Unknown Error"
-                    },
-                    "data": {
-                      "example": null,
-                      "nullable": true
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": []
-      }
-    },
-    "/api/sql/customers": {
-      "get": {
-        "summary": "/api/sql/customers",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "minBaldue",
-            "in": "query",
-            "example": "100",
-            "schema": {
-              "type": "integer"
-            }
-          },
-          {
-            "name": "maxBaldue",
-            "in": "query",
-            "example": "500",
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "CUSNUM": {
-                        "type": "number"
-                      },
-                      "LSTNAM": {
-                        "type": "string"
-                      },
-                      "INIT": {
-                        "type": "string"
-                      },
-                      "STREET": {
-                        "type": "string"
-                      },
-                      "CITY": {
-                        "type": "string"
-                      },
-                      "STATE": {
-                        "type": "string"
-                      },
-                      "ZIPCOD": {
-                        "type": "number"
-                      },
-                      "CDTLMT": {
-                        "type": "number"
-                      },
-                      "CHGCOD": {
-                        "type": "number"
-                      },
-                      "BALDUE": {
-                        "type": "number"
-                      },
-                      "CDTDUE": {
-                        "type": "number"
-                      }
-                    },
-                    "required": [
-                      "CUSNUM",
-                      "LSTNAM",
-                      "INIT",
-                      "STREET",
-                      "CITY",
-                      "STATE",
-                      "ZIPCOD",
-                      "CDTLMT",
-                      "CHGCOD",
-                      "BALDUE",
-                      "CDTDUE"
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "304": {
-            "description": ""
-          }
-        },
-        "tags": []
-      }
-    },
-    "/auth": {
-      "post": {
-        "summary": "/auth",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "token": {
-                      "type": "string",
-                      "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzcnByZiIsImlhdCI6MTYyNDY1ODcxNiwiZXhwIjoxNjI0NjYyMzE2fQ.LC5owsV5A5Llh2oNdgYAXYecbZBHoWSvIyAZY8l7JU0"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "username": {
-                    "type": "string",
-                    "example": "**PROTECTED FIELD**"
-                  },
-                  "password": {
-                    "type": "string",
-                    "example": "******"
-                  }
-                }
-              }
-            }
-          },
-          "required": true
         }
-      }
     },
-    "/auth/verify-jwt": {
-      "post": {
-        "summary": "/auth/verify-jwt",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "valid": {
-                      "type": "boolean",
-                      "example": true
+    "definitions": {},
+    "host": "localhost:3030",
+    "info": {
+        "title": "eradani-connect-template",
+        "version": "2.5.2",
+        "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
+    },
+    "openapi": "3.0.0",
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "/",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Up and running!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": ""
                     }
-                  }
-                }
-              }
+                },
+                "tags": [],
+                "produces": ["application/json"]
             }
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
         },
-        "tags": [],
-        "security": [
-          {
-            "authorization": []
-          }
-        ]
-      }
+        "/api/rpg/simple-calc/{num}": {
+            "get": {
+                "summary": "/api/rpg/simple-calc/{num}",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "num",
+                        "in": "path",
+                        "required": true,
+                        "example": 5,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "input": {
+                                            "type": "number",
+                                            "example": 5
+                                        },
+                                        "output": {
+                                            "type": "number",
+                                            "example": 500
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": ""
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Bad Data Supplied to API"
+                                        },
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "num": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "value": {
+                                                            "type": "string",
+                                                            "example": "a"
+                                                        },
+                                                        "msg": {
+                                                            "type": "string",
+                                                            "example": "Invalid value"
+                                                        },
+                                                        "param": {
+                                                            "type": "string",
+                                                            "example": "num"
+                                                        },
+                                                        "location": {
+                                                            "type": "string",
+                                                            "example": "params"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Unknown Error"
+                                        },
+                                        "data": {
+                                            "example": null,
+                                            "nullable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": []
+            }
+        },
+        "/api/sql/customers": {
+            "get": {
+                "summary": "/api/sql/customers",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "minBaldue",
+                        "in": "query",
+                        "example": "100",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "maxBaldue",
+                        "in": "query",
+                        "example": "500",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "CUSNUM": {
+                                                "type": "number"
+                                            },
+                                            "LSTNAM": {
+                                                "type": "string"
+                                            },
+                                            "INIT": {
+                                                "type": "string"
+                                            },
+                                            "STREET": {
+                                                "type": "string"
+                                            },
+                                            "CITY": {
+                                                "type": "string"
+                                            },
+                                            "STATE": {
+                                                "type": "string"
+                                            },
+                                            "ZIPCOD": {
+                                                "type": "number"
+                                            },
+                                            "CDTLMT": {
+                                                "type": "number"
+                                            },
+                                            "CHGCOD": {
+                                                "type": "number"
+                                            },
+                                            "BALDUE": {
+                                                "type": "number"
+                                            },
+                                            "CDTDUE": {
+                                                "type": "number"
+                                            }
+                                        },
+                                        "required": [
+                                            "CUSNUM",
+                                            "LSTNAM",
+                                            "INIT",
+                                            "STREET",
+                                            "CITY",
+                                            "STATE",
+                                            "ZIPCOD",
+                                            "CDTLMT",
+                                            "CHGCOD",
+                                            "BALDUE",
+                                            "CDTDUE"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": ""
+                    }
+                },
+                "tags": []
+            }
+        },
+        "/auth": {
+            "post": {
+                "summary": "/auth",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "token": {
+                                            "type": "string",
+                                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzcnByZiIsImlhdCI6MTYyNDY1ODcxNiwiZXhwIjoxNjI0NjYyMzE2fQ.LC5owsV5A5Llh2oNdgYAXYecbZBHoWSvIyAZY8l7JU0"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string",
+                                        "example": "**PROTECTED FIELD**"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "******"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/auth/verify-jwt": {
+            "post": {
+                "summary": "/auth/verify-jwt",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "valid": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "tags": [],
+                "security": [
+                    {
+                        "authorization": []
+                    }
+                ]
+            }
+        },
+        "/testing/apite/seting": {
+            "get": {
+                "summary": "/testing/apite/seting",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/trest/asdsd/sasdww": {
+            "get": {
+                "summary": "/trest/asdsd/sasdww",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/sadsad/wwewdd/dssss": {
+            "get": {
+                "summary": "/sadsad/wwewdd/dssss",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/qwewq/dsadcd/dsdf": {
+            "get": {
+                "summary": "/qwewq/dsadcd/dsdf",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/testinf/asdasd/assd": {
+            "get": {
+                "summary": "/testinf/asdasd/assd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdawsd/asdsadasdww/wwww": {
+            "get": {
+                "summary": "/asdawsd/asdsadasdww/wwww",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdasd/asdwedf/dsad": {
+            "get": {
+                "summary": "/asdasd/asdwedf/dsad",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdasd/asdsadw/wqwedc": {
+            "get": {
+                "summary": "/asdasd/asdsadw/wqwedc",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdw/w/wq": {
+            "get": {
+                "summary": "/asdw/w/wq",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdww/wqwe/eewq": {
+            "get": {
+                "summary": "/asdww/wqwe/eewq",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdf/aqdwqwe/qewqw": {
+            "get": {
+                "summary": "/asdf/aqdwqwe/qewqw",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/ads/asdwww/www": {
+            "get": {
+                "summary": "/ads/asdwww/www",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asd/asdqwe/qweasd": {
+            "get": {
+                "summary": "/asd/asdqwe/qweasd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdsa/ddasw/wweqwed": {
+            "get": {
+                "summary": "/asdsa/ddasw/wweqwed",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/ewf/rerg/errrq": {
+            "get": {
+                "summary": "/ewf/rerg/errrq",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/yucl/asdff/asdsd": {
+            "get": {
+                "summary": "/yucl/asdff/asdsd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/yucal/tuval/yucalwwww": {
+            "patch": {
+                "summary": "/yucal/tuval/yucalwwww",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/chen/yuval/bell": {
+            "get": {
+                "summary": "/chen/yuval/bell",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/adasd/asdasdasd/asdwwwwwww": {
+            "get": {
+                "summary": "/adasd/asdasdasd/asdwwwwwww",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/efoihdsln/asdjokl/asdj": {
+            "get": {
+                "summary": "/efoihdsln/asdjokl/asdj",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: asd",
+                "x-generated-at": "Mon Jul 04 2022 18:39:05 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/dsa/qwef/sdfdfg": {
+            "get": {
+                "summary": "/dsa/qwef/sdfdfg",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/fghjk/kjhgf/poijh": {
+            "get": {
+                "summary": "/fghjk/kjhgf/poijh",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdfd/gdbvsdfg/bvdsfg": {
+            "get": {
+                "summary": "/asdfd/gdbvsdfg/bvdsfg",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        }
     },
-    "/testing/apite/seting": {
-      "get": {
-        "summary": "/testing/apite/seting",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/trest/asdsd/sasdww": {
-      "get": {
-        "summary": "/trest/asdsd/sasdww",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/sadsad/wwewdd/dssss": {
-      "get": {
-        "summary": "/sadsad/wwewdd/dssss",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/qwewq/dsadcd/dsdf": {
-      "get": {
-        "summary": "/qwewq/dsadcd/dsdf",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/testinf/asdasd/assd": {
-      "get": {
-        "summary": "/testinf/asdasd/assd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdawsd/asdsadasdww/wwww": {
-      "get": {
-        "summary": "/asdawsd/asdsadasdww/wwww",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdasd/asdwedf/dsad": {
-      "get": {
-        "summary": "/asdasd/asdwedf/dsad",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdasd/asdsadw/wqwedc": {
-      "get": {
-        "summary": "/asdasd/asdsadw/wqwedc",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdw/w/wq": {
-      "get": {
-        "summary": "/asdw/w/wq",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdww/wqwe/eewq": {
-      "get": {
-        "summary": "/asdww/wqwe/eewq",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdf/aqdwqwe/qewqw": {
-      "get": {
-        "summary": "/asdf/aqdwqwe/qewqw",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/ads/asdwww/www": {
-      "get": {
-        "summary": "/ads/asdwww/www",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asd/asdqwe/qweasd": {
-      "get": {
-        "summary": "/asd/asdqwe/qweasd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdsa/ddasw/wweqwed": {
-      "get": {
-        "summary": "/asdsa/ddasw/wweqwed",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/ewf/rerg/errrq": {
-      "get": {
-        "summary": "/ewf/rerg/errrq",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/yucl/asdff/asdsd": {
-      "get": {
-        "summary": "/yucl/asdff/asdsd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/yucal/tuval/yucalwwww": {
-      "patch": {
-        "summary": "/yucal/tuval/yucalwwww",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/chen/yuval/bell": {
-      "get": {
-        "summary": "/chen/yuval/bell",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/adasd/asdasdasd/asdwwwwwww": {
-      "get": {
-        "summary": "/adasd/asdasdasd/asdwwwwwww",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/efoihdsln/asdjokl/asdj": {
-      "get": {
-        "summary": "/efoihdsln/asdjokl/asdj",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: asd",
-        "x-generated-at": "Mon Jul 04 2022 18:39:05 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/dsa/qwef/sdfdfg": {
-      "get": {
-        "summary": "/dsa/qwef/sdfdfg",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/fghjk/kjhgf/poijh": {
-      "get": {
-        "summary": "/fghjk/kjhgf/poijh",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdfd/gdbvsdfg/bvdsfg": {
-      "get": {
-        "summary": "/asdfd/gdbvsdfg/bvdsfg",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    }
-  },
-  "schemes": [
-    "http"
-  ],
-  "servers": [
-    {
-      "url": "http://localhost:3001"
-    }
-  ],
-  "swagger": "2.0",
-  "tags": []
+    "schemes": ["http"],
+    "servers": [
+        {
+            "url": "http://localhost:3001"
+        }
+    ],
+    "swagger": "2.0",
+    "tags": []
 }
