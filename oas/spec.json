@@ -412,6 +412,17 @@
         "tags": []
       }
     },
+    "/asdasd/asdsadw/wqwedc": {
+      "get": {
+        "summary": "/asdasd/asdsadw/wqwedc",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
     "/asdw/w/wq": {
       "get": {
         "summary": "/asdw/w/wq",
