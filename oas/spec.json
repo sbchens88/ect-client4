@@ -557,6 +557,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/fghjk/kjhgf/poijh": {
+      "get": {
+        "summary": "/fghjk/kjhgf/poijh",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [

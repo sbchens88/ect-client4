@@ -22,6 +22,7 @@ import mountCHEN from './chen';
 import mountADASD from './adasd';
 import mountEFOIHDSLN from './efoihdsln';
 import mountDSA from './dsa';
+import mountFGHJK from './fghjk';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -120,4 +121,8 @@ export default function addRoutes(router: Router) {
     const dsa = Router();
     mountDSA(dsa);
     router.use('/dsa', dsa);
+
+    const fghjk = Router();
+    mountFGHJK(fghjk);
+    router.use('/fghjk', fghjk);
 }
