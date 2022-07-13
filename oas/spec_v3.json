@@ -1,277 +1,277 @@
 {
-  "openapi": "3.0.0",
-  "info": {
-    "title": "eradani-connect-template",
-    "version": "2.6.0",
-    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
-  },
-  "paths": {
-    "/": {
-      "get": {
-        "summary": "/",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "example": "Up and running!"
+    "openapi": "3.0.0",
+    "info": {
+        "title": "eradani-connect-template",
+        "version": "2.6.0",
+        "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "/",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Up and running!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                  }
-                }
-              }
+                },
+                "tags": []
             }
-          }
         },
-        "tags": []
-      }
-    },
-    "/api/rpg/simple-calc/{num}": {
-      "get": {
-        "summary": "/api/rpg/simple-calc/{num}",
-        "parameters": [
-          {
-            "name": "num",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "/api/rpg/simple-calc/{num}": {
+            "get": {
+                "summary": "/api/rpg/simple-calc/{num}",
+                "parameters": [
+                    {
+                        "name": "num",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "tags": []
             }
-          }
-        ],
-        "responses": {},
-        "tags": []
-      }
+        },
+        "/api/sql/customers": {
+            "get": {
+                "summary": "/api/sql/customers",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/auth": {
+            "post": {
+                "summary": "/auth",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/auth/verify-jwt": {
+            "post": {
+                "summary": "/auth/verify-jwt",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/testing/apite/seting": {
+            "get": {
+                "summary": "/testing/apite/seting",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/trest/asdsd/sasdww": {
+            "get": {
+                "summary": "/trest/asdsd/sasdww",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/sadsad/wwewdd/dssss": {
+            "get": {
+                "summary": "/sadsad/wwewdd/dssss",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/qwewq/dsadcd/dsdf": {
+            "get": {
+                "summary": "/qwewq/dsadcd/dsdf",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/testinf/asdasd/assd": {
+            "get": {
+                "summary": "/testinf/asdasd/assd",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdawsd/asdsadasdww/wwww": {
+            "get": {
+                "summary": "/asdawsd/asdsadasdww/wwww",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdasd/asdwedf/dsad": {
+            "get": {
+                "summary": "/asdasd/asdwedf/dsad",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdasd/asdsadw/wqwedc": {
+            "get": {
+                "summary": "/asdasd/asdsadw/wqwedc",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdw/w/wq": {
+            "get": {
+                "summary": "/asdw/w/wq",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdww/wqwe/eewq": {
+            "get": {
+                "summary": "/asdww/wqwe/eewq",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdf/aqdwqwe/qewqw": {
+            "get": {
+                "summary": "/asdf/aqdwqwe/qewqw",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/ads/asdwww/www": {
+            "get": {
+                "summary": "/ads/asdwww/www",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asd/asdqwe/qweasd": {
+            "get": {
+                "summary": "/asd/asdqwe/qweasd",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdsa/ddasw/wweqwed": {
+            "get": {
+                "summary": "/asdsa/ddasw/wweqwed",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/ewf/rerg/errrq": {
+            "get": {
+                "summary": "/ewf/rerg/errrq",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/yucl/asdff/asdsd": {
+            "get": {
+                "summary": "/yucl/asdff/asdsd",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/yucal/tuval/yucalwwww": {
+            "patch": {
+                "summary": "/yucal/tuval/yucalwwww",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/chen/yuval/bell": {
+            "get": {
+                "summary": "/chen/yuval/bell",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/adasd/asdasdasd/asdwwwwwww": {
+            "get": {
+                "summary": "/adasd/asdasdasd/asdwwwwwww",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/efoihdsln/asdjokl/asdj": {
+            "get": {
+                "summary": "/efoihdsln/asdjokl/asdj",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/dsa/qwef/sdfdfg": {
+            "get": {
+                "summary": "/dsa/qwef/sdfdfg",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/fghjk/kjhgf/poijh": {
+            "get": {
+                "summary": "/fghjk/kjhgf/poijh",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdfd/gdbvsdfg/bvdsfg": {
+            "get": {
+                "summary": "/asdfd/gdbvsdfg/bvdsfg",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/delete/casdddsa": {
+            "delete": {
+                "summary": "/delete/casdddsa",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asassss/sddpppp": {
+            "get": {
+                "summary": "/asassss/sddpppp",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/pppdddll/dslpls": {
+            "get": {
+                "summary": "/pppdddll/dslpls",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdss/ssddd": {
+            "get": {
+                "summary": "/asdss/ssddd",
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/wwwwwwww/wwwwwwwwwwe/eew": {
+            "get": {
+                "summary": "/wwwwwwww/wwwwwwwwwwe/eew",
+                "responses": {},
+                "tags": []
+            }
+        }
     },
-    "/api/sql/customers": {
-      "get": {
-        "summary": "/api/sql/customers",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/auth": {
-      "post": {
-        "summary": "/auth",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/auth/verify-jwt": {
-      "post": {
-        "summary": "/auth/verify-jwt",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/testing/apite/seting": {
-      "get": {
-        "summary": "/testing/apite/seting",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/trest/asdsd/sasdww": {
-      "get": {
-        "summary": "/trest/asdsd/sasdww",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/sadsad/wwewdd/dssss": {
-      "get": {
-        "summary": "/sadsad/wwewdd/dssss",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/qwewq/dsadcd/dsdf": {
-      "get": {
-        "summary": "/qwewq/dsadcd/dsdf",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/testinf/asdasd/assd": {
-      "get": {
-        "summary": "/testinf/asdasd/assd",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdawsd/asdsadasdww/wwww": {
-      "get": {
-        "summary": "/asdawsd/asdsadasdww/wwww",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdasd/asdwedf/dsad": {
-      "get": {
-        "summary": "/asdasd/asdwedf/dsad",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdasd/asdsadw/wqwedc": {
-      "get": {
-        "summary": "/asdasd/asdsadw/wqwedc",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdw/w/wq": {
-      "get": {
-        "summary": "/asdw/w/wq",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdww/wqwe/eewq": {
-      "get": {
-        "summary": "/asdww/wqwe/eewq",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdf/aqdwqwe/qewqw": {
-      "get": {
-        "summary": "/asdf/aqdwqwe/qewqw",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/ads/asdwww/www": {
-      "get": {
-        "summary": "/ads/asdwww/www",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asd/asdqwe/qweasd": {
-      "get": {
-        "summary": "/asd/asdqwe/qweasd",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdsa/ddasw/wweqwed": {
-      "get": {
-        "summary": "/asdsa/ddasw/wweqwed",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/ewf/rerg/errrq": {
-      "get": {
-        "summary": "/ewf/rerg/errrq",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/yucl/asdff/asdsd": {
-      "get": {
-        "summary": "/yucl/asdff/asdsd",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/yucal/tuval/yucalwwww": {
-      "patch": {
-        "summary": "/yucal/tuval/yucalwwww",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/chen/yuval/bell": {
-      "get": {
-        "summary": "/chen/yuval/bell",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/adasd/asdasdasd/asdwwwwwww": {
-      "get": {
-        "summary": "/adasd/asdasdasd/asdwwwwwww",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/efoihdsln/asdjokl/asdj": {
-      "get": {
-        "summary": "/efoihdsln/asdjokl/asdj",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/dsa/qwef/sdfdfg": {
-      "get": {
-        "summary": "/dsa/qwef/sdfdfg",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/fghjk/kjhgf/poijh": {
-      "get": {
-        "summary": "/fghjk/kjhgf/poijh",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdfd/gdbvsdfg/bvdsfg": {
-      "get": {
-        "summary": "/asdfd/gdbvsdfg/bvdsfg",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/delete/casdddsa": {
-      "delete": {
-        "summary": "/delete/casdddsa",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asassss/sddpppp": {
-      "get": {
-        "summary": "/asassss/sddpppp",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/pppdddll/dslpls": {
-      "get": {
-        "summary": "/pppdddll/dslpls",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdss/ssddd": {
-      "get": {
-        "summary": "/asdss/ssddd",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/wwwwwwww/wwwwwwwwwwe/eew": {
-      "get": {
-        "summary": "/wwwwwwww/wwwwwwwwwwe/eew",
-        "responses": {},
-        "tags": []
-      }
-    }
-  },
-  "tags": [],
-  "servers": [
-    {
-      "url": "http://192.168.1.142:3030"
-    },
-    {
-      "url": "https://192.168.1.142:3030"
-    }
-  ]
+    "tags": [],
+    "servers": [
+        {
+            "url": "http://192.168.1.142:3030"
+        },
+        {
+            "url": "https://192.168.1.142:3030"
+        }
+    ]
 }
