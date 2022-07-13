@@ -24,6 +24,7 @@ import mountEFOIHDSLN from './efoihdsln';
 import mountDSA from './dsa';
 import mountFGHJK from './fghjk';
 import mountASDFD from './asdfd';
+import mount_DELETE from './_delete';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -130,4 +131,8 @@ export default function addRoutes(router: Router) {
     const asdfd = Router();
     mountASDFD(asdfd);
     router.use('/asdfd', asdfd);
+
+    const _delete = Router();
+    mount_DELETE(_delete);
+    router.use('/delete', _delete);
 }
