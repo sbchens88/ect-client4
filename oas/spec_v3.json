@@ -249,12 +249,22 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/asdss/ssddd": {
+      "get": {
+        "summary": "/asdss/ssddd",
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "tags": [],
   "servers": [
     {
-      "url": "http://localhost:3030"
+      "url": "http://192.168.1.142:3030"
+    },
+    {
+      "url": "https://192.168.1.142:3030"
     }
   ]
 }

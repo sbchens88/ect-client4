@@ -1,6 +1,6 @@
 {
   "definitions": {},
-  "host": "localhost:3030",
+  "host": "192.168.1.142:3030",
   "info": {
     "title": "eradani-connect-template",
     "version": "2.6.0",
@@ -369,10 +369,22 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/asdss/ssddd": {
+      "get": {
+        "summary": "/asdss/ssddd",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "swagger": "2.0",
   "tags": []
