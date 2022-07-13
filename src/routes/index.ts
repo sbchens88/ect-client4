@@ -29,6 +29,7 @@ import mountASASSSS from './asassss';
 import mountPPPDDDLL from './pppdddll';
 import mountASDSS from './asdss';
 import mountWWWWWWWW from './wwwwwwww';
+import mountWQ from './wq';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -155,4 +156,8 @@ export default function addRoutes(router: Router) {
     const wwwwwwww = Router();
     mountWWWWWWWW(wwwwwwww);
     router.use('/wwwwwwww', wwwwwwww);
+
+    const wq = Router();
+    mountWQ(wq);
+    router.use('/wq', wq);
 }
