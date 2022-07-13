@@ -28,6 +28,7 @@ import mount_DELETE from './_delete';
 import mountASASSSS from './asassss';
 import mountPPPDDDLL from './pppdddll';
 import mountASDSS from './asdss';
+import mountWWWWWWWW from './wwwwwwww';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -150,4 +151,8 @@ export default function addRoutes(router: Router) {
     const asdss = Router();
     mountASDSS(asdss);
     router.use('/asdss', asdss);
+
+    const wwwwwwww = Router();
+    mountWWWWWWWW(wwwwwwww);
+    router.use('/wwwwwwww', wwwwwwww);
 }

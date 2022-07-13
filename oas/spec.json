@@ -380,6 +380,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/wwwwwwww/wwwwwwwwwwe/eew": {
+      "get": {
+        "summary": "/wwwwwwww/wwwwwwwwwwe/eew",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
