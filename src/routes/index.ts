@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 import mountAPI from './api';
-import mountAuth from './auth';
+import mountAuth from './auth'; 
 import respond from 'src/middlewares/respond';
 import mountTESTING from './testing';
 import mountTREST from './trest';
