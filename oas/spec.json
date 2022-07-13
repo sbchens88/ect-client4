@@ -358,6 +358,17 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/pppdddll/dslpls": {
+      "get": {
+        "summary": "/pppdddll/dslpls",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [

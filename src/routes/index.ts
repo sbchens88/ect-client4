@@ -26,6 +26,7 @@ import mountFGHJK from './fghjk';
 import mountASDFD from './asdfd';
 import mount_DELETE from './_delete';
 import mountASASSSS from './asassss';
+import mountPPPDDDLL from './pppdddll';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -140,4 +141,8 @@ export default function addRoutes(router: Router) {
     const asassss = Router();
     mountASASSSS(asassss);
     router.use('/asassss', asassss);
+
+    const pppdddll = Router();
+    mountPPPDDDLL(pppdddll);
+    router.use('/pppdddll', pppdddll);
 }
