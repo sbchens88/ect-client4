@@ -402,13 +402,22 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/adsf/ew/dsffff": {
+      "get": {
+        "summary": "/adsf/ew/dsffff",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
-    "http",
     "https",
-    "https",
-    "https"
+    "http"
   ],
   "swagger": "2.0",
   "tags": []

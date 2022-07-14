@@ -30,6 +30,7 @@ import mountPPPDDDLL from './pppdddll';
 import mountASDSS from './asdss';
 import mountWWWWWWWW from './wwwwwwww';
 import mountWQ from './wq';
+import mountADSF from './adsf';
 
 console.log(' Testing in index: index.ts');
 console.log('ENV: ', process.env);
@@ -160,4 +161,8 @@ export default function addRoutes(router: Router) {
     const wq = Router();
     mountWQ(wq);
     router.use('/wq', wq);
+
+    const adsf = Router();
+    mountADSF(adsf);
+    router.use('/adsf', adsf);
 }
